@@ -4,13 +4,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class passwordvalidation {
-    private static final Set<String> CommonPasswords = new HashSet<>();
+    private static final Set<String> WeakPasswords = new HashSet<>();
     static {
-        CommonPasswords.add("welcome");
-        CommonPasswords.add("6666");
-        CommonPasswords.add("hello");
-        CommonPasswords.add("admin");
-        CommonPasswords.add("123456");
+        WeakPasswords.add("welcome");
+        WeakPasswords.add("6666");
+        WeakPasswords.add("hello");
+        WeakPasswords.add("admin");
+        WeakPasswords.add("123456");
+        WeakPasswords.add("Password1");
+        WeakPasswords.add("Aa345678");
     }
     public static void main(String[] args) {
         System.out.println("Hello, World!");
@@ -47,8 +49,8 @@ public class passwordvalidation {
         return false;
     }
 
-    public static boolean isCommonPassword(String password){
-        return CommonPasswords.contains(password.toLowerCase());
+    public static boolean isWeakPassword(String password){
+        return WeakPasswords.contains(password);
     }
 
 }
