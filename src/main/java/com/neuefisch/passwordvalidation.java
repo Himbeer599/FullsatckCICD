@@ -23,12 +23,13 @@ public class passwordvalidation {
     }
 
     public static boolean containsDigits(String password){
-        for( char c : password.toCharArray()){
-            if(Character.isDigit(c)){
-                return true;
-            }
-        }
-        return false;
+//        for( char c : password.toCharArray()){
+//            if(Character.isDigit(c)){
+//                return true;
+//            }
+//        }
+//        return false;
+        return password.matches(".*\\d.*");
     }
 
     public static boolean containsUpperAndLowerCase(String password){
