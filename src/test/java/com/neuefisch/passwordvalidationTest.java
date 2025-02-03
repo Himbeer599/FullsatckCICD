@@ -35,4 +35,10 @@ class passwordvalidationTest {
         String password = "Aa345678";
         assertTrue(passwordvalidation.isWeakPassword(password));
     }
+
+    @Test
+    void expectedTrue_WhenContiansSpecial_Test() {
+        String password = "12ZA45h*!h";
+        assertTrue(passwordvalidation.containsSpecialCharacter(password));
+    }
 }

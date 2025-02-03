@@ -50,7 +50,11 @@ public class passwordvalidation {
     }
 
     public static boolean isWeakPassword(String password){
-        return WeakPasswords.contains(password);
+        return WeakPasswords.contains(password) || WeakPasswords.contains(password.toLowerCase());
+    }
+
+    public static boolean containsSpecialCharacter( String password){
+        return password.matches(".*[^a-zA-Z0-9].*");
     }
 
 }
