@@ -1,6 +1,7 @@
 package com.neuefisch;
 
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class passwordvalidation {
@@ -16,6 +17,21 @@ public class passwordvalidation {
     }
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please Enter your password: ");
+        String password = scanner.nextLine();
+        scanner.close();
+        if(!isValidLength(password)) {
+            System.out.println("Password must be at least 8 characters");
+        }else if(!containsDigits(password)) {
+            System.out.println("Password must contain digitis");
+        }else if (!containsUpperAndLowerCase(password)) {
+            System.out.println("Password must contain upper and lower");
+        }else if (isWeakPassword(password)) {
+            System.out.println("Password is too common and easily guessable. Choose a stronger one.");
+        }else{
+            System.out.println("Password is valid");
+        }
     }
 
     public static boolean isValidLength(String password){
