@@ -19,6 +19,9 @@ public class Main {
         System.out.println(person1.toString());
         System.out.println(person2.toString());
         System.out.println(person3.toString());
-
+        System.out.println(Calculator.add(2, 3));
+        System.out.println(Calculator.subtraction(2, 3));
+        System.out.println(Calculator.multiplication(2, 3));
+        System.out.println(Calculator.division(2, 3));
     }
 }
