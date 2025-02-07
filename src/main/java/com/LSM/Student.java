@@ -1,9 +1,22 @@
 package com.LSM;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
     private String firstName;
     private String lastName;
     private int studentId;
+    private List<Course> courseList;
+
+    public List<Course> getCourseList() {
+        return courseList;
+    }
+
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
+    }
+
 
     public Student() {
     }
@@ -12,6 +25,7 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.studentId = studentId;
+        this.courseList = new ArrayList<>();
     }
 
     public String getFirstName() {
@@ -36,6 +50,10 @@ public class Student {
 
     public void setStudentId(int studentId) {
         this.studentId = studentId;
+    }
+
+    public void addCourse(Course course){
+        courseList.add(course);
     }
 
     @Override

@@ -5,9 +5,11 @@ import java.util.List;
 
 public class School {
     private List<Student> students;
+    private List<Course> courses;
 
     public School() {
         this.students = new ArrayList<>();
+        this.courses = new ArrayList<>();
     }
 
     public void addStudent(Student student) {
@@ -36,6 +38,19 @@ public class School {
             System.out.println("Student with ID " + id + " not found.");
         }
     }
+    public void addCourse(Course course){
+        courses.add(course);
+    }
+
+    public List<Course> getCoursesOfStudent(int id){
+        for(Student student: students){
+            if(student.getStudentId() == id){
+                return student.getCourseList();
+            }
+        }
+        return new ArrayList<>();
+
+    }
 
     public void printAllStudents() {
         if (students.isEmpty()) {
@@ -44,6 +59,16 @@ public class School {
             System.out.println("List of all students:");
             for (Student student : students) {
                 System.out.println(student);
+            }
+        }
+    }
+    public void printAllCourses() {
+        if (courses.isEmpty()) {
+            System.out.println("This student doesn't attend any courses in the school");
+        } else {
+            System.out.println("List of all courses:");
+            for (Course course : courses) {
+                System.out.println(course);
             }
         }
     }
