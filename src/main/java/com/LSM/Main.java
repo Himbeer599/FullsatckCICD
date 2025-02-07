@@ -19,8 +19,11 @@ public class Main {
         school.printAllStudents();
 
         Student foundstudent1 = school.findById(6);
-        Student foundstudent2= school.findById(3);
+        Student foundstudent2 = school.findById(3);
         System.out.println(foundstudent1);
         System.out.println(foundstudent2);
+        int removedStudentId = 3;
+        school.removeById(removedStudentId);
+        school.printAllStudents();
     }
 }
