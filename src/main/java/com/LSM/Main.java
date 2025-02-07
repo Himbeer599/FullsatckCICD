@@ -23,6 +23,8 @@ public class Main {
         school.addCourse(course1);
         school.addCourse(course2);
         school.addCourse(course3);
+        school.printAllCourses();
+
         student1.addCourse(course1);
         student1.addCourse(course2);
         student1.addCourse(course3);
@@ -41,7 +43,6 @@ public class Main {
         school.removeById(removedStudentId);
         school.printAllStudents();
 
-        school.printAllCourses();
         int studentId = 2;
         List<Course> courses= school.getCoursesOfStudent(studentId);
         System.out.println(courses);

@@ -52,7 +52,7 @@ public class Student {
         this.studentId = studentId;
     }
 
-    public void addCourse(Course course){
+    public void addCourse(Course course) {
         courseList.add(course);
     }
 
