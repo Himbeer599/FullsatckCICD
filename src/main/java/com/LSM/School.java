@@ -13,6 +13,14 @@ public class School {
     public void addStudent(Student student) {
         students.add(student);
     }
+    public Student findById(int id){
+        for(Student student :students){
+            if(student.getStudentId() == id){
+                return student;
+            }
+        }
+        return null;
+    }
 
     public void printAllStudents() {
         if (students.isEmpty()) {

@@ -17,5 +17,10 @@ public class Main {
         school.addStudent(student4);
         school.addStudent(student5);
         school.printAllStudents();
+
+        Student foundstudent1 = school.findById(6);
+        Student foundstudent2= school.findById(3);
+        System.out.println(foundstudent1);
+        System.out.println(foundstudent2);
     }
 }
