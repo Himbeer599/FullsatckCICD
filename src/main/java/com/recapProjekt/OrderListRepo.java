@@ -1,9 +1,14 @@
 package com.recapProjekt;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderListRepo {
     private List<Order> orders;
+
+    public OrderListRepo() {
+        this.orders = new ArrayList<>();
+    }
 
     public OrderListRepo(List<Order> orders) {
         this.orders = orders;
