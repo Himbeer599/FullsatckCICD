@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepo {
-
+//there are two ways: one is the following (initilizing products in constructor); the other is : private List<Product> products = new ArrayList<>();
     private List<Product> products;
+    public ProductRepo() {
+        this.products = new ArrayList<>();
+    }
 
     public ProductRepo(List<Product> products) {
         this.products = products;
