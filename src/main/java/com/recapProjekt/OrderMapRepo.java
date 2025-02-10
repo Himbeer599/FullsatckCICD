@@ -20,8 +20,7 @@ public class OrderMapRepo implements OrderRepo{
     };
     @Override
     public boolean removeOrder(Order order){
-        if(orderMap.containsKey(order.id())){
-            orderMap.remove(order);
+        if(orderMap.remove(order.id())!=null) {
             System.out.println("Order removed with ID: " + order.id());
             return true;
         }
