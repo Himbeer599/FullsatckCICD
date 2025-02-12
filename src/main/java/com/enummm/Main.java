@@ -17,7 +17,12 @@ public class Main {
 
         Optional<Person> foundPerson = persons.findById(2);
         System.out.println("Found Person: "+foundPerson);
-        persons.printPerson(person1);
+        foundPerson.ifPresentOrElse(
+                person -> System.out.println(person.name()+"'s favorite day is " + DaysOfWeek.getDayType(person.favoriteDay())),
+                ()-> System.out.println("Person not found")
+        );
+
+//        persons.printPerson(person1);
 
     }
 }
