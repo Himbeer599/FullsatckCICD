@@ -14,4 +14,5 @@ public class Student {
     String name;
     String address;
     String gender;
+    double grade;
 }

@@ -1,21 +1,20 @@
 package com.lombok;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+//@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Builder
+@Value
 public class Course {
     String id;
     String name;
     String teacher;
-    String student;
+//    String student;
     List students;
-    List<String> studentsName;
+//    List<String> studentsName;
+//    double grade;
 }
