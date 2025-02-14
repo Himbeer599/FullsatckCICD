@@ -1,4 +1,6 @@
 package com.lombok;
 
-public record Teacher(String id, String name, String subject) {
+import lombok.With;
+
+public record Teacher(@With String id, @With String name, @With String subject) {
 }

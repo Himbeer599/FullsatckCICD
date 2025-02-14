@@ -21,25 +21,27 @@ public class Main {
                 .gender("Female")
                 .build();
         Teacher teacher1 = new Teacher("1","Jane","Math");
-        Teacher teacher2 = new Teacher("2","Diane","History");
-        Teacher teacher3 = new Teacher("3","Sofie","English");
+        Teacher teacher2 = teacher1.withSubject("History");
+        Teacher teacher3 = teacher1.withId("2").withName("Alicia").withSubject("English");
+//        Teacher teacher2 = new Teacher("2","Diane","History");
+//        Teacher teacher3 = new Teacher("3","Sofie","English");
         Course course1 = Course.builder()
                 .teacher(teacher1.name())
                 .students(student1.getName())
                 .id("1")
-                .name("Math")
+                .name(teacher1.subject())
                 .build();
         Course course2 = Course.builder()
                 .teacher(teacher2.name())
                 .students(student2.getName())
                 .id("2")
-                .name("History")
+                .name(teacher2.subject())
                 .build();
         Course course3 = Course.builder()
                 .teacher(teacher3.name())
                 .students(student3.getName())
                 .id("3")
-                .name("English")
+                .name(teacher3.subject())
                 .build();
         System.out.println(course1);
         System.out.println(course2);
