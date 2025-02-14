@@ -48,4 +48,26 @@ public class UniversityService {
         return totalSum/totalStudents;
     }
 
+
+    public double averageGardeOfUni(University university){
+        double totalSum = 0;
+        double totalStudents =0;
+        //here should use Set to store students to avoide the repeation
+        Set<Student> students = new HashSet<>();
+        for(Course course: university.courses()){
+            List<Student> students1 = course.getStudents();
+            for(Student student:students1){
+                //only process students when add student to set succeed(that means this student is not in the set)
+                if(students.add(student)){
+                    totalSum+=student.getGrade();
+                    totalStudents++;
+                }
+            }
+            if(totalStudents == 0){
+                return 0;
+            }
+        }
+        return totalSum/totalStudents;
+    }
+
 }
