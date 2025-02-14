@@ -1,5 +1,4 @@
 package com.streammmm;
-
 import java.util.Objects;
 
 public class Student {
@@ -17,7 +16,7 @@ public class Student {
 
     public static Student fromCsv(String line){
         String[] parts = line.split(",");
-        if(parts.length<3)return null;
+        if(parts.length<3) return null;
         int id = Integer.parseInt((parts[0].trim()));
         String name =parts[1].trim();
         int postCode = Integer.parseInt(parts[2].trim());
