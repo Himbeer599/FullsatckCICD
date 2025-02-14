@@ -46,6 +46,8 @@ public class Main {
         students.add(student2);
         students.add(student3);
         System.out.println(students);
+//        students2.add(student1);
+//        students2.add(student2);
         students2.add(student4);
         students2.add(student5);
 
@@ -54,11 +56,18 @@ public class Main {
         Teacher teacher3 = teacher1.withId("2").withName("Alicia").withSubject("English");
 //        University university = new University()
         UniversityService universityService = new UniversityService();
+        List<Course> courses = new ArrayList<>();
+
         Course course1 = new Course("1",teacher1.subject(),teacher1.name(),students);
         Course course2 = new Course("2",teacher2.subject(),teacher2.name(),students2);
+        courses.add(course1);
+        courses.add(course2);
         double average1 = universityService.averageGrade(course1);
         System.out.println(average1);
         System.out.println(universityService.averageGrade(course2));
+        University university = new University("1","High School",courses);
+        double d2 = universityService.averageGardeOfUni(university);
+        System.out.println("The average grade of university: " +d2);
 
 
 //        Teacher teacher2 = new Teacher("2","Diane","History");
